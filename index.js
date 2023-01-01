@@ -1,8 +1,8 @@
 const http = require('http');
-
+// return Math.random() * (max - min) + min;
 const server = http.createServer((req, res) => {
-  const lat = Math.random() * 180 - 90;
-  const lng = Math.random() * 360 - 180;
+  const lat = Math.random() * (28-25)+25;
+  const lng = Math.random() * (84-78)+78;
   if (req.url === '/coordinates') {
     res.end(JSON.stringify({ lat: lat, lng: lng }));
   }
